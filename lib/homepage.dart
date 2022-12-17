@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'doaharian.dart';
+import 'jadwal_shalat.dart';
 
 class HomepageWidget extends StatefulWidget {
   @override
@@ -131,10 +132,18 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                 color: Color.fromRGBO(224, 205, 56, 1),
                               ))),
                       Positioned(
-                          top: 36,
-                          left: 12,
-                          child: Text(
-                            'Jadwal Salat',
+                        top: 14,
+                        left: 5,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => JadwalsholatWidget()),
+                            );
+                          },
+                          child: const Text(
+                            'Jadwal Sholat',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -143,7 +152,9 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.normal,
                                 height: 1),
-                          )),
+                          ),
+                        ),
+                      ),
                       Positioned(
                           top: 0,
                           left: 106,
@@ -190,10 +201,18 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                 ),
                                 color: Color.fromRGBO(22, 187, 197, 1),
                               ))),
-                      const Positioned(
-                          top: 31,
-                          left: 7,
-                          child: Text(
+                      Positioned(
+                        top: 15,
+                        left: 1,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => DoaharianWidget()),
+                            );
+                          },
+                          child: const Text(
                             'Latihan Menulis',
                             textAlign: TextAlign.left,
                             style: TextStyle(
@@ -203,7 +222,9 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                 letterSpacing: 0,
                                 fontWeight: FontWeight.normal,
                                 height: 1),
-                          )),
+                          ),
+                        ),
+                      ),
                       Positioned(
                           top: 0,
                           left: 106,
