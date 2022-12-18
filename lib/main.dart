@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'homepage.dart';
+import 'package:get/get.dart';
 
 void main() {
-  runApp(MaterialApp(
+  runApp(GetMaterialApp(
     debugShowCheckedModeBanner: false,
     home: StartingpageWidget(),
   ));

@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_11/app/modules/detail_juz/views/detail_juz_view.dart';
+import 'package:flutter_application_11/app/modules/detail_surah/views/detail_surah_view.dart';
+import 'package:flutter_application_11/app/modules/home/views/home_view.dart';
+import 'package:flutter_application_11/app/modules/introduction/views/introduction_view.dart';
 import 'doaharian.dart';
 import 'jadwal_shalat.dart';
+import 'quran.dart';
+import 'package:flutter_application_11/app/contents/color.dart';
+import 'package:get/get.dart';
+import '../app/modules/home/controllers/home_controller.dart';
 
 class HomepageWidget extends StatefulWidget {
   @override
@@ -75,7 +83,7 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                           top: 26,
                           left: 11,
                           child: Text(
-                            'Al - Qur’an',
+                            'Al - Quran',
                             textAlign: TextAlign.left,
                             style: TextStyle(
                                 color: Color.fromRGBO(255, 255, 255, 1),
@@ -85,6 +93,30 @@ class _HomepageWidgetState extends State<HomepageWidget> {
                                 fontWeight: FontWeight.normal,
                                 height: 1),
                           )),
+                      Positioned(
+                        top: 15,
+                        left: 1,
+                        child: TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => IntroductionView()),
+                            );
+                          },
+                          child: const Text(
+                            'Quran',
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                                color: Color.fromRGBO(255, 255, 255, 1),
+                                fontFamily: 'Poppins',
+                                fontSize: 14,
+                                letterSpacing: 0,
+                                fontWeight: FontWeight.normal,
+                                height: 1),
+                          ),
+                        ),
+                      ),
                       Positioned(
                           top: 0,
                           left: 103,
